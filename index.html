@@ -34,61 +34,61 @@
   <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
 
   <script>
-    var TxtType = function(el, toRotate, period) {
-        this.toRotate = toRotate;
-        this.el = el;
-        this.loopNum = 0;
-        this.period = parseInt(period, 10) || 2000;
-        this.txt = '';
-        this.tick();
-        this.isDeleting = false;
+    var TxtType = function (el, toRotate, period) {
+      this.toRotate = toRotate;
+      this.el = el;
+      this.loopNum = 0;
+      this.period = parseInt(period, 10) || 2000;
+      this.txt = '';
+      this.tick();
+      this.isDeleting = false;
     };
 
-    TxtType.prototype.tick = function() {
-        var i = this.loopNum % this.toRotate.length;
-        var fullTxt = this.toRotate[i];
+    TxtType.prototype.tick = function () {
+      var i = this.loopNum % this.toRotate.length;
+      var fullTxt = this.toRotate[i];
 
-        if (this.isDeleting) {
+      if (this.isDeleting) {
         this.txt = fullTxt.substring(0, this.txt.length - 1);
-        } else {
+      } else {
         this.txt = fullTxt.substring(0, this.txt.length + 1);
-        }
+      }
 
-        this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+      this.el.innerHTML = '<span class="wrap">' + this.txt + '</span>';
 
-        var that = this;
-        var delta = 200 - Math.random() * 100;
+      var that = this;
+      var delta = 200 - Math.random() * 100;
 
-        if (this.isDeleting) { delta /= 2; }
+      if (this.isDeleting) { delta /= 2; }
 
-        if (!this.isDeleting && this.txt === fullTxt) {
+      if (!this.isDeleting && this.txt === fullTxt) {
         delta = this.period;
         this.isDeleting = true;
-        } else if (this.isDeleting && this.txt === '') {
+      } else if (this.isDeleting && this.txt === '') {
         this.isDeleting = false;
         this.loopNum++;
         delta = 500;
-        }
+      }
 
-        setTimeout(function() {
+      setTimeout(function () {
         that.tick();
-        }, delta);
+      }, delta);
     };
 
-    window.onload = function() {
-        var elements = document.getElementsByClassName('typewrite');
-        for (var i=0; i<elements.length; i++) {
-            var toRotate = elements[i].getAttribute('data-type');
-            var period = elements[i].getAttribute('data-period');
-            if (toRotate) {
-              new TxtType(elements[i], JSON.parse(toRotate), period);
-            }
+    window.onload = function () {
+      var elements = document.getElementsByClassName('typewrite');
+      for (var i = 0; i < elements.length; i++) {
+        var toRotate = elements[i].getAttribute('data-type');
+        var period = elements[i].getAttribute('data-period');
+        if (toRotate) {
+          new TxtType(elements[i], JSON.parse(toRotate), period);
         }
-        // INJECT CSS
-        var css = document.createElement("style");
-        css.type = "text/css";
-        css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
-        document.body.appendChild(css);
+      }
+      // INJECT CSS
+      var css = document.createElement("style");
+      css.type = "text/css";
+      css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
+      document.body.appendChild(css);
     };
 
   </script>
@@ -144,7 +144,7 @@
             </h1>
             <h1>
               <strong>Software Engineer
-                
+
                 </span>
               </strong>
             </h1>
@@ -152,9 +152,10 @@
           <hr>
         </div>
         <div class="col-lg-8 mx-auto">
-            <p> I am a 
-              <span class="typewrite" data-period="1000" data-type='[ "Father.", "Husband.", "Musician.", "Basketball Player!" ]'>
-                <span id="cursor"></span></p>
+          <p> I am a
+            <span class="typewrite" data-period="1000" data-type='[ "Father.", "Husband.", "Musician.", "Basketball Player!" ]'>
+              <span id="cursor"></span>
+          </p>
 
           <p class="text-faded mb-5">"Every once in a while, a new technology, an old problem, and a big idea turn into an innovation."</p>
           <p class="text-faded mb-5">- Dean Kamen</p>
@@ -175,8 +176,8 @@
           <hr class="light my-4">
           <p class="text-faded mb-4">I was born on a small island in the South Pacific and came to America to look for a better opprotunity. I have
             found a great passion in technology. I specialize in creating software that is catered to any audience including
-            individuals, small-business and enterprise level corporations. My passion comes from knowing that I can build anything
-            I could ever imagine and can help bring other's ideas into a reality
+            individuals, small-business and enterprise level corporations. My passion comes from knowing that I can build
+            anything I could ever imagine and can help bring other's ideas into a reality
           </p>
           <a class="btn btn-light btn-xl js-scroll-trigger" href="#services">Skills</a>
         </div>
@@ -339,29 +340,37 @@
       <hr class="my-4">
       <div class="row">
         <div class="col-lg-6 mx-auto text-center" style="margin-top: 50px;">
-          <p class="mb-20">Ready to start your next project with me? Send me an email or leave me a message and I will get back
-            to you as soon as possible</p>
+          <p class="mb-20">Ready to start your next project with me? Send me an email or leave me a message and I will get back to you as
+            soon as possible</p>
 
         </div>
         <div class="col form-control " style="width: 400px;">
           <script src="https://usebasin.com/f/fe80485df46c/ahoy.js" async defer></script>
-            <form accept-charset="UTF-8" action="https://usebasin.com/f/fe80485df46c" method="POST">
+          <form accept-charset="UTF-8" action="https://usebasin.com/f/fe80485df46c" method="POST">
             <div class="form-group">
               <label for="exampleInputEmail1">Name</label>
-              <input type="text" class="form-control" id="exampleInputEmail1">
+              <input type="text" class="form-control" id="name" name="name">
             </div>
             <div class="form-group">
               <label for="email-address">Email address</label>
-              <input type="email" class="form-control" id="email" name="name" aria-describedby="emailHelp" >
+              <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp">
             </div>
             <div class="form-group">
               <label for="exampleInputPassword1">Message</label>
-              <textarea type="text" class="form-control" id="exampleInputPassword1" placeholder="What would you like to say..."></textarea>
+              <textarea type="text" class="form-control" id="comment" name="comment" placeholder="What would you like to say..."></textarea>
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
           </form>
         </div>
       </div>
+      <script>
+        $.ajax({
+          url: "https://usebasin.com/f/fe80485df46c.json",
+          method: "POST",
+          data: { message: "hello!", email: "vinson.aiono@gmail.com" },
+          dataType: "json"
+        })
+      </script>
       <br>
       <br>
       <br>
@@ -374,7 +383,7 @@
       <br>
       <div class="container">
 
-        <div class="row" >
+        <div class="row">
 
           <div class="col-lg-3 mr-auto text-center">
             <i class="fa devicon-facebook-plain fa-3x mb-3 sr-contact"></i>
@@ -402,8 +411,8 @@
           </div>
         </div>
       </div>
-        
-      </div>
+
+    </div>
     </div>
   </section>
 
