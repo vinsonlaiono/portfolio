@@ -157,10 +157,18 @@ header.masthead{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    
+}
+#pic1{
+    background-image: url(../img/china.jpg);
+    height: 300px; 
+}
+.parallax { 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .overlay{
-    
     position: absolute;
     background-color: rgba(0, 0, 0,0.65);
     top: 0;
