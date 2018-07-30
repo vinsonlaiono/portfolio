@@ -80,7 +80,7 @@ img::-moz-selection{
     -webkit-transition:all .2s;-moz-transition:all .2s;transition:all .2s
 }
 #mainNav .navbar-brand{
-    font-weight:700;
+    font-weight:400;
     text-transform:uppercase;
     color:#235f7a;
     font-family:'Open Sans','Helvetica Neue',Arial,sans-serif
@@ -90,7 +90,7 @@ img::-moz-selection{
 }
 #mainNav .navbar-nav>li.nav-item>a.nav-link,#mainNav .navbar-nav>li.nav-item>a.nav-link:focus{
     font-size:.9rem;
-    font-weight:700;
+    font-weight:100;
     text-transform:uppercase;
     color:#212529
 }
@@ -181,7 +181,7 @@ header.masthead hr{
     margin-top:30px;margin-bottom:30px
 }
 header.masthead h1{
-    font-size:2rem
+    font-size:4rem
 }
 header.masthead p{
     font-weight:300
@@ -213,7 +213,7 @@ header.masthead p{
 .portfolio-box{
     position:relative;
     display:block;
-    max-width:650px;
+    max-width:100%;
     margin:0 auto
 }
 .portfolio-box .portfolio-box-caption{
@@ -256,8 +256,8 @@ header.masthead p{
 }
 @media (min-width:768px){
     .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category{
-        font-size:16px}.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name{
-            font-size:22px
+            font-size:px}.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name{
+            font-size:60px
         }
     }
     .text-primary{
@@ -283,3 +283,10 @@ header.masthead p{
     .btn-primary:active,.btn-primary:focus{
         box-shadow:0 0 0 .2rem rgba(240,95,64,.5)!important
     }
+@media (max-width: 990px){
+    #aboutme{
+        text-align: center;
+        height: auto;
+        margin: auto;
+    }
+}
