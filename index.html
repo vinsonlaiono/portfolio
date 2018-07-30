@@ -93,6 +93,14 @@
       var x = document.URL;
       console.log("CUrrent url: @@@@@@",x)
 
+      if(x == "https://vinsonlaiono.github.io/portfolio/#hoopfinder"){
+        setTimeout(function () {
+          window.location.href = "#portfolio"; //will redirect to your blog page (an ex: blog.html)
+        }, 4000);
+        setTimeout(function () {
+          $('.bd-example-modal-lg').modal();
+        }, 4500);
+      }
       if(x == "https://vinsonlaiono.github.io/portfolio/#portfolio"){
         setTimeout(function () {
           window.location.href = "#portfolio"; //will redirect to your blog page (an ex: blog.html)
@@ -383,7 +391,7 @@
               <div class="modal-content p-1 m-0">
                 <!-- <img src="img/portfolio/fullsize/hoopfinder-1.PNG" alt=""> -->
                 <div class="portfolio-box-caption container-fluid p-0 my-2 p-3" style="background-color: #3f9cd0; color: white">
-                  <h1 class="text-center modal-header">HoopFinder</h1>
+                  <h1 class="text-center modal-header" id="hoopfinder">HoopFinder</h1>
                   <img class="portfolio-box img-responsive block-center" src="https://media.giphy.com/media/3024NGmLUGvI0V5K0A/giphy.gif" alt="">
                     <h6>A multifaceted web application that serves as a social media outlet for anyone interested in playing
                       in a local pickup game anywhere in the world; allows users to create court locations; invite others
