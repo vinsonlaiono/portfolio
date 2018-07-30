@@ -90,12 +90,18 @@
       css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
       document.body.appendChild(css);
 
-      setTimeout(function () {
-        window.location.href = "#portfolio"; //will redirect to your blog page (an ex: blog.html)
-      }, 4000);
-      setTimeout(function () {
-        $('.bd-example-modal-lg').modal();
-      }, 4500);
+      var x = document.URL;
+      console.log("CUrrent url: @@@@@@",x)
+
+      if(x == "https://vinsonlaiono.github.io/portfolio/#portfolio"){
+        setTimeout(function () {
+          window.location.href = "#portfolio"; //will redirect to your blog page (an ex: blog.html)
+        }, 4000);
+        setTimeout(function () {
+          $('.bd-example-modal-lg').modal();
+        }, 4500);
+      }
+
     };
 
   </script>
