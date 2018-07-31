@@ -160,8 +160,8 @@ header.masthead{
 }
 #pic1{
     /* background-image: url(../img/china.jpg); */
-    background-image: url(https://iso.500px.com/wp-content/uploads/2014/07/hong-kong-cityscape1.jpg);
-    height: 35A0px; 
+    background-image: url(../img/hongkong.jpg);
+    height: 350px; 
 }
 .parallax { 
     background-attachment: fixed;
