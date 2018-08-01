@@ -163,6 +163,11 @@ header.masthead{
     background-image: url(../img/hongkong.jpg);
     height: 350px; 
 }
+#pic2{
+    /* background-image: url(../img/china.jpg); */
+    background-image: url(../img/sf.jpg);
+    height: 350px; 
+}
 .parallax { 
     background-attachment: fixed;
     background-position: center;
@@ -186,6 +191,10 @@ header.masthead h1{
 }
 header.masthead p{
     font-weight:300
+}
+#passions{
+    height: 100px;
+    width: 100px;
 }
 @media (min-width:768px){
     header.masthead p{
