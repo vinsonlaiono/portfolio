@@ -93,10 +93,6 @@
       var x = document.URL;
       console.log("CUrrent url: @@@@@@", x)
 
-      setTimeout(function () {
-        $('#jsScroll').trigger('click');
-      }, 2000);
-
       if (x == "https://vinsonlaiono.github.io/portfolio/#hoopfinder") {
         setTimeout(function () {
           $('#jsScroll').trigger('click'); 
@@ -107,7 +103,7 @@
       }
       if (x == "https://vinsonlaiono.github.io/portfolio/#pairitup") {
         setTimeout(function () {
-          window.location.href = "#portfolio"; 
+          $('#jsScroll').trigger('click'); 
         }, 4000);
         setTimeout(function () {
           $('.bs-example-modal-lg').modal();
@@ -115,7 +111,7 @@
       }
       if (x == "https://vinsonlaiono.github.io/portfolio/#sekosevents") {
         setTimeout(function () {
-          window.location.href = "#portfolio";
+          $('#jsScroll').trigger('click'); 
         }, 4000);
         setTimeout(function () {
           $('.bs-example-modal-lg-seko').modal();
