@@ -33,94 +33,6 @@
   <!-- in your header -->
   <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
 
-  <script>
-    var TxtType = function (el, toRotate, period) {
-      this.toRotate = toRotate;
-      this.el = el;
-      this.loopNum = 0;
-      this.period = parseInt(period, 10) || 2000;
-      this.txt = '';
-      this.tick();
-      this.isDeleting = false;
-    };
-
-    TxtType.prototype.tick = function () {
-      var i = this.loopNum % this.toRotate.length;
-      var fullTxt = this.toRotate[i];
-
-      if (this.isDeleting) {
-        this.txt = fullTxt.substring(0, this.txt.length - 1);
-      } else {
-        this.txt = fullTxt.substring(0, this.txt.length + 1);
-      }
-
-      this.el.innerHTML = '<span class="wrap">' + this.txt + '</span>';
-
-      var that = this;
-      var delta = 200 - Math.random() * 100;
-
-      if (this.isDeleting) { delta /= 2; }
-
-      if (!this.isDeleting && this.txt === fullTxt) {
-        delta = this.period;
-        this.isDeleting = true;
-      } else if (this.isDeleting && this.txt === '') {
-        this.isDeleting = false;
-        this.loopNum++;
-        delta = 500;
-      }
-
-      setTimeout(function () {
-        that.tick();
-      }, delta);
-    };
-
-    window.onload = function () {
-      var elements = document.getElementsByClassName('typewrite');
-      for (var i = 0; i < elements.length; i++) {
-        var toRotate = elements[i].getAttribute('data-type');
-        var period = elements[i].getAttribute('data-period');
-        if (toRotate) {
-          new TxtType(elements[i], JSON.parse(toRotate), period);
-        }
-      }
-      // INJECT CSS
-      var css = document.createElement("style");
-      css.type = "text/css";
-      css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
-      document.body.appendChild(css);
-
-      var x = document.URL;
-      console.log("CUrrent url: @@@@@@", x)
-
-      if (x == "https://vinsonlaiono.github.io/portfolio/#hoopfinder") {
-        setTimeout(function () {
-          $('#jsScroll').trigger('click'); 
-        }, 1500);
-        setTimeout(function () {
-          $('.bd-example-modal-lg').modal();
-        }, 2500);
-      }
-      if (x == "https://vinsonlaiono.github.io/portfolio/#pairitup") {
-        setTimeout(function () {
-          $('#jsScroll').trigger('click'); 
-        }, 1500);
-        setTimeout(function () {
-          $('.bs-example-modal-lg').modal();
-        }, 2500);
-      }
-      if (x == "https://vinsonlaiono.github.io/portfolio/#sekosevents") {
-        setTimeout(function () {
-          $('#jsScroll').trigger('click'); 
-        }, 1500);
-        setTimeout(function () {
-          $('.bs-example-modal-lg-seko').modal();
-        }, 2500);
-      }
-
-    };
-
-  </script>
 
 </head>
 
@@ -160,7 +72,7 @@
               Contact</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger sr-icons" href="https://drive.google.com/open?id=10ePvg7XxWiiwkkyySgUP9Cq16j6M1JWX">
+            <a class="nav-link js-scroll-trigger sr-icons" href="">
               <i class="fa fa-paperclip mr-2 sr-icons"></i>
               Resume</a>
           </li>
@@ -214,8 +126,10 @@
             <div class="row">
 
               <div class="col-sm-12 col-lg-4">
-                <img class="col-lg-12 col-md-12 col-sm-12 passion-img" style="border-radius: 50%; width: 21rem; height: 18rem" src="https://scontent-sjc3-1.xx.fbcdn.net/v/t31.0-8/26220349_1430207323758846_2047746482154245479_o.jpg?_nc_cat=0&oh=71c1cb3534cba9c0e8c47dc01b362f35&oe=5BE2AE1B"
-                  alt="">
+                <!-- <img class="col-lg-12 col-md-12 col-sm-12 passion-img" style="border-radius: 50%; width: 21rem; height: 18rem" src="/img/fampic.jpg" -->
+                <!-- alt=""> -->
+                <img style="border-radius: 30%; width: 15rem; height: 15rem" src="/img/fampic.jpg" 
+                alt="">
               </div>
               <div class="col-8" id="aboutme">
                 <p class="text-faded mb-4" id="aboutme">I was born on a small island in the South Pacific and came to America to look for a better opportunity. I
@@ -224,13 +138,13 @@
                   I developed a passion for technology and aspire to become a Software Engineer. Some of my other passions
                   include traveling with my family, creating and playing music, and playing and watching basketball.
                 </p>
-                <p class="text-faded" id="aboutme">
+                <!-- <p class="text-faded" id="aboutme">
                   I currently am in the process of completing my Computer Science degree at Utah Valley University. I returned to San Jose
                   to attend Coding Dojo where I advanced my skills in the MEAN, Java, and Python stacks. I specialize in
                   using these languages to create software that caters to individuals, small-businesses, and enterprise level
                   corporations. Knowing that there is no limit to the things that I can create drives my passion for software
                   engineering. I aspire to help bring other’s innovative ideas into reality, so let’s get to work.
-                </p>
+                </p> -->
               </div>
             </div>
             <h2 class="text-white">Some of My Passions</h2>
@@ -239,21 +153,21 @@
           <div class="">
 
             <!-- <div class="col"> -->
-            <img align="middle" class="col-lg-3 col-md-6 col-sm-6 mx-3 my-3 passion-img" style="border-radius: 50%; width: 13rem; height: 11rem"
-              src="https://www.playgroundmusiccenter.com/images/category/icon/468.jpg" alt="">
+            <img align="middle" class="col-lg-3 col-md-6 col-sm-6 mx-3 my-3 passion-img" style="border-radius: 50%; width: 15rem; height: 13rem"
+              src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="">
             <!-- <span id="passions">
                  I love creating music and playing music
               </span>
             </div>
             <div class="col"> -->
-            <img class="col-lg-3 col-md-6 col-sm-6 mx-3 my-3 passion-img" style="border-radius: 50%; width: 13rem; height: 11rem" src="https://cdn-images-1.medium.com/max/1559/1*iwPLQjyFYRTVeQ2cb4S9rA.png"
+            <img class="col-lg-3 col-md-6 col-sm-6 mx-3 my-3 passion-img" style="border-radius: 50%; width: 15rem; height: 13rem" src="https://cdn-images-1.medium.com/max/1559/1*iwPLQjyFYRTVeQ2cb4S9rA.png"
               alt="">
-            <!-- <span class="col-3" id="passions">
-                  I love creating music and playing music
+              <!-- <span class="col-3" id="passions">
+                I love creating music and playing music
               </span>
             </div>
             <div class="col"> -->
-            <img class="col-lg-3 col-md-6 col-sm-6 mx-3 my-3 passion-img" style="border-radius: 50%; width: 13rem; height: 11rem" src="http://lwosonnba.ms.lastwordonsports.com/wp-content/uploads/sites/9/2017/06/695340160.jpg"
+            <img class="col-lg-3 col-md-6 col-sm-6 mx-3 my-3 passion-img" style="border-radius: 50%; width: 15rem; height: 13rem" src="/img/notavandal-ttAhBmEfNIk-unsplash.jpg"
               alt="">
             <!-- <span class="col-3" id="passions">
                 I love creating music and playing music
@@ -601,7 +515,8 @@
           <div class="col-lg-1 mr-auto text-center">
             <i class="fa devicon-facebook-plain fa-3x mb-3 sr-contact"></i>
             <p>
-              <a href="https://www.facebook.com/vinson.aiono" class="text-light">facebook</a>
+              <!-- <a href="https://www.facebook.com/vinson.aiono" class="text-light">facebook</a> -->
+              <a href="" class="text-light">facebook</a>
             </p>
           </div>
           <div class="col-lg-1 mr-auto text-center">
@@ -613,7 +528,7 @@
           <div class="col-lg-1 mr-auto text-center">
             <i class="fa fa-linkedin-square fa-3x mb-3 sr-contact"></i>
             <p>
-              <a href="https://www.linkedin.com/in/vinsonaiono/" class="text-light">Linkedin</a>
+              <a href="" class="text-light">Linkedin</a>
             </p>
           </div>
           <div class="col-lg-1 mr-auto text-center">
@@ -625,19 +540,18 @@
           <div class="col-lg-1 mr-auto text-center">
             <i class="fa fa-file fa-3x mb-3 sr-contact"></i>
             <p>
-              <a href="https://drive.google.com/open?id=10ePvg7XxWiiwkkyySgUP9Cq16j6M1JWX" class="text-light">Resume</a>
+              <!-- <a href="https://drive.google.com/open?id=10ePvg7XxWiiwkkyySgUP9Cq16j6M1JWX" class="text-light">Resume</a> -->
+              <a href="" class="text-light">Resume</a>
             </p>
           </div>
         </div>
-        <br>
-        <br>
-        <div class="row mx-auto">
+        <!-- <div class="row mx-auto">
           <div class="col mx-auto">
             <small class="mx-auto">
               <p class="text-white-50 text-center">Created 2018 by Vinson Aiono</p>
             </small>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
 
@@ -655,6 +569,7 @@
 
   <!-- Custom scripts for this template -->
   <script src="js/creative.min.js"></script>
+  <script src="js/main.js"></script>
 
 </body>
 
